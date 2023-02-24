@@ -7,31 +7,21 @@ import jakarta.inject.Named;
 
 
 @ApplicationScoped
-public class Computer implements IComputer {
+public class ComputerNew implements IComputer {
 
     private String name;
 
-//    @Inject
-//    @Named("monitor")
+    @Inject
+    @Named("monitorNew")
     protected IMonitor monitor; // в эту переменную будет подставлен конкретный объект (это может быть неизвестно самой переменной)
+
     private IMouse mouse;
 
-//    @Inject
-//    public Computer(IMouse mouse) {
-//        this.mouse = mouse;
-//    }
-
-    @Inject
-    public Computer(IMouse mouse, @Named("monitor") IMonitor monitor) {
-        this.mouse = mouse;
-        this.monitor= monitor;
-    }
-
-    public Computer(String name) {
+    public ComputerNew(String name) {
         this.name = name;
     }
 
-    public Computer() {
+    public ComputerNew() {
     }
 
     @Override
@@ -57,8 +47,7 @@ public class Computer implements IComputer {
         this.name = name;
     }
 
-    @Inject
-    public void setMonitor(@Named("monitor") IMonitor monitor) {
+    public void setMonitor(IMonitor monitor) {
         this.monitor = monitor;
     }
 

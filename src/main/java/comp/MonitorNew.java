@@ -1,20 +1,19 @@
 package comp;
 
 import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.enterprise.inject.Alternative;
+import jakarta.enterprise.inject.Default;
 import jakarta.inject.Named;
 
 @Named
 @ApplicationScoped
-//@Alternative
-public class Monitor implements IMonitor{
-    private String name = "mon";
+public class MonitorNew implements IMonitor{
+    private String name = "new";
 
-    public Monitor(String name) {
+    public MonitorNew(String name) {
         this.name = name;
     }
 
-    public Monitor() {
+    public MonitorNew() {
     }
 
     @Override
