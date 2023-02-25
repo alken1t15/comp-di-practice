@@ -12,7 +12,7 @@ public class ComputerNew implements IComputer {
     private String name;
 
     @Inject
-    @Named("monitorNew")
+//    @Named("monitorNew")
     protected IMonitor monitor; // в эту переменную будет подставлен конкретный объект (это может быть неизвестно самой переменной)
 
     private IMouse mouse;

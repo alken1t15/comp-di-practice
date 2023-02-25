@@ -72,6 +72,9 @@ public class Main {
         IComputer computer = container.select(Computer.class).get();
         IComputer computer1 = container.select(ComputerNew.class).get();
 
+        System.out.println("computer1 = " + computer1.getMonitor());
+        System.out.println("computer = " + computer.getMonitor());
+
         // проверяем, что они не пустые
 //        System.out.println("monitor = " + monitor);
 //        System.out.println("comp = " + comp.getMonitor()); // монитор внедряется с помощью DI
@@ -79,7 +82,7 @@ public class Main {
 //        System.out.println("monitor = " + computer.getMonitor().getName());
 //        System.out.println("monitor = " + computer1.getMonitor().getName()); // монитор внедряется с помощью DI
 
-        System.out.println("monitor = " + computer.getMouse());
+//        System.out.println("monitor = " + computer.getMouse());
 
         container.shutdown(); // завершаем контейнер
 

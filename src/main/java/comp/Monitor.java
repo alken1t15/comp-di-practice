@@ -4,8 +4,8 @@ import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.inject.Alternative;
 import jakarta.inject.Named;
 
-@Named
-@ApplicationScoped
+//@Named
+//@ApplicationScoped
 //@Alternative
 public class Monitor implements IMonitor{
     private String name = "mon";
